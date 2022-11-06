@@ -13,6 +13,7 @@ class AddPhoto extends StatefulWidget {
 }
 
 class _AddPhotoState extends State<AddPhoto> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +79,65 @@ class _AddPhotoState extends State<AddPhoto> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              insetPadding: EdgeInsets.all(20),
+                              contentPadding: EdgeInsets.all(30),
+                              elevation: 5,
+                              backgroundColor: Colors.black,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              title: Text(
+                                "Record added successfully",
+                                style: GoogleFonts.raleway(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
+                                    color: colors.primarytextcolor),
+                              ),
+                              actions: [
+                                Row(
+                                  children: [
+                                    Spacer(),
+                                    TextButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Text(
+                                          "CANCEL",
+                                          style: GoogleFonts.raleway(
+                                              fontWeight: FontWeight.w500,
+                                              color: colors.greentext,
+                                              fontSize: 15),
+                                        )),
+                                    Spacer(),
+                                    TextButton(
+                                        onPressed: () {
+
+                                        },
+                                        style: ButtonStyle(
+                                            backgroundColor:
+                                            MaterialStateProperty.all(
+                                                colors.redcardbg)),
+                                        child: Text(
+                                          "ADD MORE",
+                                          style: GoogleFonts.raleway(
+                                            fontSize: 15,
+                                            color: colors.errortext,
+                                          ),
+                                        )),
+                                    Spacer()
+                                  ],
+                                ),
+
+                              ],
+                            );
+                          });
+                    },
                     child: Text(
                       "Report disease",
                       style: GoogleFonts.raleway(
@@ -118,7 +177,7 @@ class _AddPhotoState extends State<AddPhoto> {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          insetPadding: EdgeInsets.zero,
+                          insetPadding: EdgeInsets.all(20),
                           contentPadding: EdgeInsets.all(30),
                           elevation: 5,
                           backgroundColor: Colors.black,
@@ -126,7 +185,7 @@ class _AddPhotoState extends State<AddPhoto> {
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           title: Text(
-                            "Record added Successfully",
+                            "Record added successfully",
                             style: GoogleFonts.raleway(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
@@ -137,7 +196,9 @@ class _AddPhotoState extends State<AddPhoto> {
                               children: [
                                 Spacer(),
                                 TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                     child: Text(
                                       "END",
                                       style: GoogleFonts.raleway(
@@ -147,7 +208,10 @@ class _AddPhotoState extends State<AddPhoto> {
                                     )),
                                 Spacer(),
                                 TextButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      int count = 3;
+                                      Navigator.of(context).popUntil((_) => count-- <= 0);
+                                    },
                                     style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(

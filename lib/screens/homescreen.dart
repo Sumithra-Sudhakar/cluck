@@ -1,3 +1,5 @@
+
+
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 import 'loadingscreen.dart';
+import 'notifications.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,6 +18,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+  static const List<Widget> _pages =[];
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
@@ -22,18 +27,29 @@ class _HomePageState extends State<HomePage> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        bottomNavigationBar: ConvexAppBar(
-          style: TabStyle.fixedCircle,
+        bottomNavigationBar:  BottomNavigationBar(
+          currentIndex: _selectedIndex, //New
+          onTap: _onItemTapped,
+          elevation: 4,
           backgroundColor: colors.scaffoldcolor,
+          selectedItemColor: colors.primarytextcolor,
+          unselectedItemColor: Colors.white54,
+
+
           items: [
-            TabItem(icon: Icons.home, title: 'Home'),
-            TabItem(
-              icon: Icons.add,
-              title: 'Add',
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: colors.scaffoldcolor,
+
+
             ),
-            TabItem(icon: Icons.settings, title: 'Manage'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'Manage',
+                backgroundColor: colors.scaffoldcolor
+            ),
           ],
-          onTap: (int i) => print('click index=$i'),
         ),
         backgroundColor: colors.scaffoldcolor,
         body: CustomSliverView(
@@ -62,10 +78,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Icon(Icons.settings, color: colors.primarytextcolor),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const LoadingScreen(),
-                      ));
+
                     },
                   ),
                   TextButton(
@@ -75,7 +88,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Icon(Icons.notification_important_outlined,
                         color: colors.primarytextcolor),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  Notifications(),
+                          ));
+                    },
                   ),
                   Spacer()
                 ],
@@ -88,13 +106,41 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
-                      "${formattedDate}",
-                      style: TextStyle(
-                          fontFamily: '.SF Pro Text',
-                          fontSize: 50,
-                          fontWeight: FontWeight.bold,
-                          color: colors.primarytextcolor),
+                    Row(
+                      children: [
+                        Text(
+                          "${formattedDate}",
+                          style: TextStyle(
+                              fontFamily: '.SF Pro Text',
+                              fontSize: 50,
+                              fontWeight: FontWeight.bold,
+                              color: colors.primarytextcolor),
+                        ),
+                        Spacer(
+                          flex: 4,
+                        ),
+                        InkWell(
+                          child: Container(
+                            height: 65,
+                            width: 65,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                                shape: BoxShape.rectangle,
+                                color: colors.greencardbg,
+                                border: Border.all(
+                                  width: 1,
+                                )),
+                            child: Icon(Icons.add, color: colors.greentext, size: 40,),
+                          ),
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => const LoadingScreen(),
+                                ));
+                          },
+                        ),
+Spacer()
+                      ],
                     ),
                     SizedBox(
                       height: 15,
@@ -159,5 +205,10 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 }
