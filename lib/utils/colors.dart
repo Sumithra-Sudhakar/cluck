@@ -9,3 +9,5 @@ var greentext = const Color(0xff41D4AF);
 var errortext = const Color(0xffFF4F4F);
 var yellowtext = const Color(0xffFFCE4F);
 var alertcardcolor = const Color(0xff4E4632);
+var greenbuttonbg = const Color(0xff2C4243);
+var yellowbuttonbg = const Color(0xff6F603A);
