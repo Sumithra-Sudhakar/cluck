@@ -13,3 +13,5 @@ var greenbuttonbg = const Color(0xff2C4243);
 var yellowbuttonbg = const Color(0xff6F603A);
 var redbuttonbg = const Color(0xff352626);
 var proximitycardbg = const Color(0xff1F1F1F);
+var bottomnavigationbg = const Color(0xff242424);
+var managecadrbg = const Color(0xff272727);

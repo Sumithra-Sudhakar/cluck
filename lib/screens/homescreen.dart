@@ -25,29 +25,34 @@ class _HomePageState extends State<HomePage> {
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('kk.mm').format(now);
     return Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _selectedIndex, //New
-          onTap: _onItemTapped,
-          elevation: 4,
-          backgroundColor: colors.scaffoldcolor,
-          selectedItemColor: colors.primarytextcolor,
-          unselectedItemColor: Colors.white54,
+        bottomNavigationBar: SizedBox(
+          height: 70,
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            currentIndex: _selectedIndex, //New
+            onTap: _onItemTapped,
+            elevation: 4,
+            backgroundColor: colors.bottomnavigationbg,
 
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: colors.scaffoldcolor,
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.notifications_none),
-                label: 'Alert',
-                backgroundColor: colors.scaffoldcolor),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
-                label: 'Manage',
-                backgroundColor: colors.scaffoldcolor),
-          ],
+            selectedItemColor: colors.primarytextcolor,
+            unselectedItemColor: Colors.white54,
+
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: 'Home',
+                backgroundColor: colors.scaffoldcolor,
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.notifications_none),
+                  label: 'Alert',
+                  backgroundColor: colors.scaffoldcolor),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.settings),
+                  label: 'Manage',
+                  backgroundColor: colors.scaffoldcolor),
+            ],
+          ),
         ),
         backgroundColor: colors.scaffoldcolor,
         body: _pages[_selectedIndex]);

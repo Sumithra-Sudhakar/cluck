@@ -12,48 +12,51 @@ class ProximityAlert extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width*0.9,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color:colors.proximitycardbg,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width*0.9,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color:colors.proximitycardbg,
 
 
-      ),
+        ),
 child: Padding(
   padding: const EdgeInsets.all(12.0),
   child: Column(
-    children: [
-      Align(
-        alignment: Alignment.topLeft,
-        child: Text("Stray alert", style: GoogleFonts.raleway(
-          fontSize: 14,
-          color: colors.primarytextcolor,
-          fontWeight: FontWeight.w400
-        ),),
-      ),
-      const SizedBox(
-        height: 20,
-      ),
-      Row(
-        children: [
-          Text("Coop1",style: GoogleFonts.raleway(
+      children: [
+        Align(
+          alignment: Alignment.topLeft,
+          child: Text("Stray alert", style: GoogleFonts.raleway(
+            fontSize: 14,
+            color: colors.primarytextcolor,
+            fontWeight: FontWeight.w400
+          ),),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        Row(
+          children: [
+            Text("Coop1",style: GoogleFonts.raleway(
+                fontSize: 14,
+                color: colors.primarytextcolor,
+
+            ),),
+            Spacer(),
+            Icon(this.isStray?(this.isHuman?Icons.man:Icons.animation_outlined):Icons.add, color: colors.primarytextcolor,),
+            Text(this.isStray?(this.isHuman?" Human": " Animal"):" Chicken", style: GoogleFonts.raleway(
               fontSize: 14,
               color: colors.primarytextcolor,
 
-          ),),
-          Spacer(),
-          Icon(this.isStray?(this.isHuman?Icons.man:Icons.animation_outlined):Icons.add, color: colors.primarytextcolor,),
-          Text(this.isStray?(this.isHuman?" Human": " Animal"):" Chicken", style: GoogleFonts.raleway(
-            fontSize: 14,
-            color: colors.primarytextcolor,
-
-          ))
-        ],
-      )
-    ],
+            ))
+          ],
+        )
+      ],
   ),
 ),
+      ),
     );
   }
 }

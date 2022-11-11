@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('kk.mm').format(now);
     return DefaultTabController(
+
       length: 2,
       child: Scaffold(
         backgroundColor: colors.scaffoldcolor,
@@ -159,6 +160,7 @@ class _HomeState extends State<Home> {
                       ),
                     )
                   ],
+
                 ),
               ),
             ),
@@ -168,6 +170,7 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
+
       ),
     );
   }

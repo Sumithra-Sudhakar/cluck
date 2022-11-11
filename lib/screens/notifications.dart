@@ -20,26 +20,56 @@ class _NotificationsState extends State<Notifications> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colors.scaffoldcolor,
-      body: CustomSliverView(columnList: [
-        SizedBox(
-          height: 200,
-        ),
-        BatchCard(),
-        AlertCard(iscritical: true),
-        Row(
-          children: [
-            CoopCard(
-              isnormal: true,
-            ),
-            CoopCard(
-              isnormal: false,
-            ),
-          ],
-        ),
-        ProximityAlert(isStray: false, isHuman: false),
-        ProximityAlert(isStray: true, isHuman: true),
-        ProximityAlert(isStray: true, isHuman: false)
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
+        child: CustomSliverView(columnList: [
+          SizedBox(
+            height: 40,
+          ),
+         Row(
+           children: [
+             Align(
+               alignment: Alignment.topLeft,
+               child: Text(
+                 "Alerts",
+                 style: GoogleFonts.raleway(
+                     color: colors.primarytextcolor,
+                     fontWeight: FontWeight.bold,
+                     fontSize: 35),
+               ),
+             ),
+             Spacer(
+
+             ),
+             TextButton(
+               style: TextButton.styleFrom(
+                 backgroundColor: colors.iconbg,
+                 shape: CircleBorder(),
+               ),
+               child: Icon(Icons.filter_alt_rounded, color: colors.primarytextcolor),
+               onPressed: () {
+                 Navigator.push(
+                     context,
+                     MaterialPageRoute(
+                       builder: (context) => Notifications(),
+                     ));
+               },
+             ),
+
+           ],
+         ),
+          SizedBox(
+            height: 50,
+          ),
+          ProximityAlert(isStray: true, isHuman: true),
+          AlertCard(iscritical: true),
+          AlertCard(iscritical: false),
+          AlertCard(iscritical: true),
+          AlertCard(iscritical: true),AlertCard(iscritical: true),
+          AlertCard(iscritical: false),
+
+        ]),
+      ),
     );
   }
 }
