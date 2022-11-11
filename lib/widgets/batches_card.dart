@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
@@ -22,6 +21,9 @@ class _BatchCardState extends State<BatchCard> {
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
             Row(
               children: [
                 Text(
@@ -110,7 +112,10 @@ class _BatchCardState extends State<BatchCard> {
                       fontSize: 18, color: colors.primarytextcolor),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.02,
+            ),
           ]),
         ));
   }
