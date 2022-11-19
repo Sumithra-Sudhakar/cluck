@@ -37,7 +37,7 @@ class _SettingsState extends State<Settings> {
               fontWeight: FontWeight.bold),
         ),
       ),
-      body: CustomSliverView(
+      body: const CustomSliverView(
         columnList: [
           BatchCard(),
           CoopCard(isnormal: true)

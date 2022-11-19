@@ -1,15 +1,13 @@
 import 'dart:async';
 
 import 'package:cluck/screens/login.dart';
-import 'package:cluck/screens/settings.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
 import 'package:intl/intl.dart';
 
-import 'loadingscreen.dart';
-import 'notifications.dart';
+import '../loadingscreen.dart';
 //TODO: TOP NAVIGATION PAGES
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -39,13 +37,13 @@ class _HomeState extends State<Home> {
         backgroundColor: colors.scaffoldcolor,
         body: CustomSliverView(
           columnList: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Expanded(
               child: Row(
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "WELCOME",
                     style: GoogleFonts.raleway(
@@ -53,24 +51,24 @@ class _HomeState extends State<Home> {
                         fontWeight: FontWeight.w600,
                         fontSize: 20),
                   ),
-                  Spacer(
+                  const Spacer(
                     flex: 5,
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
                       backgroundColor: colors.iconbg,
-                      shape: CircleBorder(),
+                      shape: const CircleBorder(),
                     ),
                     child: Icon(Icons.settings, color: colors.primarytextcolor),
                     onPressed: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Login(),
+                            builder: (context) => const Login(),
                           ));
                     },
                   ),
-                  Spacer()
+                  const Spacer()
                 ],
               ),
             ),
@@ -83,14 +81,14 @@ class _HomeState extends State<Home> {
                     Row(
                       children: [
                         Text(
-                          "${formattedDate}",
+                          formattedDate,
                           style: TextStyle(
                               fontFamily: '.SF Pro Text',
                               fontSize: 50,
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.w400,
                               color: colors.primarytextcolor),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 4,
                         ),
                         InkWell(
@@ -118,10 +116,10 @@ class _HomeState extends State<Home> {
                                 ));
                           },
                         ),
-                        Spacer()
+                        const Spacer()
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Text(
@@ -131,7 +129,7 @@ class _HomeState extends State<Home> {
                           fontSize: 18,
                           color: colors.primarytextcolor),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text(
@@ -178,8 +176,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             const Expanded(
-              child: Text(""),
               flex: 30,
+              child: Text(""),
             )
           ],
         ),

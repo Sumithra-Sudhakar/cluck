@@ -1,5 +1,5 @@
-import 'package:cluck/screens/addphoto.dart';
-import 'package:cluck/screens/manage.dart';
+import 'package:cluck/screens/data%20entry/addphoto.dart';
+import 'package:cluck/screens/home/manage.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,7 +7,7 @@ import 'package:cluck/utils/colors.dart' as colors;
 import 'package:intl/intl.dart';
 
 import 'home.dart';
-import 'loadingscreen.dart';
+import '../loadingscreen.dart';
 import 'notifications.dart';
 
 class HomePage extends StatefulWidget {

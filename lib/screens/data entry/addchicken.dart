@@ -110,7 +110,7 @@ class _AddChickenState extends State<AddChicken> {
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Row(
             children: [
               SizedBox(
@@ -125,7 +125,7 @@ class _AddChickenState extends State<AddChicken> {
                       color: colors.greentext,
                     ),
                   )),
-              Spacer(),
+              const Spacer(),
               TextButton(
                   onPressed: () {},
                   style: ButtonStyle(
@@ -138,10 +138,10 @@ class _AddChickenState extends State<AddChicken> {
                       color: colors.greentext,
                     ),
                   )),
-              Spacer()
+              const Spacer()
             ],
           ),
-          Spacer()
+          const Spacer()
         ],
       ),
     );

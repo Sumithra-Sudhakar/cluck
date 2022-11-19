@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
 
-import 'loadingscreen.dart';
+import '../loadingscreen.dart';
 
 class AddPhoto extends StatefulWidget {
   const AddPhoto({Key? key}) : super(key: key);
@@ -36,7 +36,7 @@ class _AddPhotoState extends State<AddPhoto> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -50,7 +50,7 @@ class _AddPhotoState extends State<AddPhoto> {
                       fontWeight: FontWeight.w300,
                       color: colors.primarytextcolor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   "1.5kg",
                   style: GoogleFonts.raleway(
@@ -61,7 +61,7 @@ class _AddPhotoState extends State<AddPhoto> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(
@@ -85,8 +85,8 @@ class _AddPhotoState extends State<AddPhoto> {
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
-                              insetPadding: EdgeInsets.all(20),
-                              contentPadding: EdgeInsets.all(30),
+                              insetPadding: const EdgeInsets.all(20),
+                              contentPadding: const EdgeInsets.all(30),
                               elevation: 5,
                               backgroundColor: Colors.black,
                               shape: RoundedRectangleBorder(
@@ -102,7 +102,7 @@ class _AddPhotoState extends State<AddPhoto> {
                               actions: [
                                 Row(
                                   children: [
-                                    Spacer(),
+                                    const Spacer(),
                                     TextButton(
                                         onPressed: () {
                                           Navigator.pop(context);
@@ -114,7 +114,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                               color: colors.greentext,
                                               fontSize: 15),
                                         )),
-                                    Spacer(),
+                                    const Spacer(),
                                     TextButton(
                                         onPressed: () {
 
@@ -130,7 +130,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                             color: colors.errortext,
                                           ),
                                         )),
-                                    Spacer()
+                                    const Spacer()
                                   ],
                                 ),
 
@@ -150,7 +150,7 @@ class _AddPhotoState extends State<AddPhoto> {
           ),
           Row(
             children: [
-              Spacer(
+              const Spacer(
                 flex: 5,
               ),
               TextButton(
@@ -168,7 +168,7 @@ class _AddPhotoState extends State<AddPhoto> {
                       color: colors.greentext,
                     ),
                   )),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               TextButton(
@@ -177,8 +177,8 @@ class _AddPhotoState extends State<AddPhoto> {
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
-                          insetPadding: EdgeInsets.all(20),
-                          contentPadding: EdgeInsets.all(30),
+                          insetPadding: const EdgeInsets.all(20),
+                          contentPadding: const EdgeInsets.all(30),
                           elevation: 5,
                           backgroundColor: Colors.black,
                           shape: RoundedRectangleBorder(
@@ -194,7 +194,7 @@ class _AddPhotoState extends State<AddPhoto> {
                           actions: [
                             Row(
                               children: [
-                                Spacer(),
+                                const Spacer(),
                                 TextButton(
                                     onPressed: () {
                                       Navigator.pop(context);
@@ -206,7 +206,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                           color: colors.errortext,
                                           fontSize: 15),
                                     )),
-                                Spacer(),
+                                const Spacer(),
                                 TextButton(
                                     onPressed: () {
                                       int count = 2;
@@ -223,7 +223,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                         color: colors.greentext,
                                       ),
                                     )),
-                                Spacer()
+                                const Spacer()
                               ],
                             ),
 
@@ -231,6 +231,9 @@ class _AddPhotoState extends State<AddPhoto> {
                         );
                       });
                 },
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(colors.greencardbg)),
                 child: Text(
                   "CONFIRM",
                   style: GoogleFonts.raleway(
@@ -238,11 +241,8 @@ class _AddPhotoState extends State<AddPhoto> {
                     color: colors.greentext,
                   ),
                 ),
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(colors.greencardbg)),
               ),
-              Spacer()
+              const Spacer()
             ],
           )
         ],

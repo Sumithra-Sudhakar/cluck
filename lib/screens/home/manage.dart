@@ -1,5 +1,5 @@
-import 'package:cluck/screens/addbatch.dart';
-import 'package:cluck/screens/addchicken.dart';
+import 'package:cluck/screens/data%20entry/addbatch.dart';
+import 'package:cluck/screens/data%20entry/addchicken.dart';
 import 'package:cluck/screens/vaccination.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class Manage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => AddBatch(),
+                        builder: (context) => const AddBatch(),
                       ));
                 },
                 child: Container(
@@ -53,7 +53,7 @@ class Manage extends StatelessWidget {
                           "assets/chicken.png",
                           height: MediaQuery.of(context).size.height * 0.18,
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           width: MediaQuery.of(context).size.width * 0.6,
                           decoration: BoxDecoration(
@@ -79,7 +79,7 @@ class Manage extends StatelessWidget {
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Align(
@@ -109,7 +109,7 @@ class Manage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => AddChicken(),
+                        builder: (context) => const AddChicken(),
                       ));
                 },
                 child: Container(
@@ -151,7 +151,7 @@ class Manage extends StatelessWidget {
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Align(
@@ -179,7 +179,7 @@ class Manage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Vaccination()));
+                      MaterialPageRoute(builder: (context) => const Vaccination()));
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width * 9,
@@ -195,11 +195,11 @@ class Manage extends StatelessWidget {
                           "assets/vaccine.png",
                           height: MediaQuery.of(context).size.height * 0.18,
                         ),
-                        Spacer(),
+                        const Spacer(),
                         Container(
                           width: MediaQuery.of(context).size.width * 0.6,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(10),
                               bottomLeft: Radius.circular(10),
                             ),
@@ -221,7 +221,7 @@ class Manage extends StatelessWidget {
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 20,
                                 ),
                                 Align(

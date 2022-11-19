@@ -1,13 +1,11 @@
-import 'package:cluck/widgets/alert_card_respnded.dart';
-import 'package:cluck/widgets/batches_card.dart';
-import 'package:cluck/widgets/coop_card.dart';
+import 'package:cluck/widgets/alert_card_responded.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:cluck/widgets/proximity_alert_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
 
-import '../widgets/alert_card.dart';
+import '../../widgets/alert_card.dart';
 
 class Notifications extends StatefulWidget {
   const Notifications({Key? key}) : super(key: key);
@@ -24,7 +22,7 @@ class _NotificationsState extends State<Notifications> {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
         child: CustomSliverView(columnList: [
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
          Row(
@@ -39,36 +37,36 @@ class _NotificationsState extends State<Notifications> {
                      fontSize: 35),
                ),
              ),
-             Spacer(
+             const Spacer(
 
              ),
              TextButton(
                style: TextButton.styleFrom(
                  backgroundColor: colors.iconbg,
-                 shape: CircleBorder(),
+                 shape: const CircleBorder(),
                ),
                child: Icon(Icons.filter_alt_rounded, color: colors.primarytextcolor),
                onPressed: () {
                  Navigator.push(
                      context,
                      MaterialPageRoute(
-                       builder: (context) => Notifications(),
+                       builder: (context) => const Notifications(),
                      ));
                },
              ),
 
            ],
          ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
-          ProximityAlert(isStray: true, isHuman: true),
-          AlertCard(iscritical: true),
-          AlertCard(iscritical: false),
-          AlertCardResponded(iscritical: true, accepted: false),
-          AlertCardResponded(iscritical: false, accepted: true),
-          AlertCard(iscritical: true),AlertCard(iscritical: true),
-          AlertCard(iscritical: false),
+          const ProximityAlert(isStray: true, isHuman: true),
+          const AlertCard(iscritical: true),
+          const AlertCard(iscritical: false),
+          const AlertCardResponded(iscritical: true, accepted: false),
+          const AlertCardResponded(iscritical: false, accepted: true),
+          const AlertCard(iscritical: true),const AlertCard(iscritical: true),
+          const AlertCard(iscritical: false),
 
         ]),
       ),

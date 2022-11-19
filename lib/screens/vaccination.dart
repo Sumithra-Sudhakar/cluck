@@ -34,7 +34,7 @@ class Vaccination extends StatelessWidget {
           TextButton(
             style: TextButton.styleFrom(
               backgroundColor: colors.greenbuttonbg,
-              shape: CircleBorder(),
+              shape: const CircleBorder(),
             ),
             child: Icon(
               Icons.add,
@@ -43,12 +43,12 @@ class Vaccination extends StatelessWidget {
             ),
             onPressed: () {},
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           )
         ],
       ),
-      body: CustomSliverView(
+      body: const CustomSliverView(
         columnList: [
           VaccinationCard(),
           VaccinationCard(),

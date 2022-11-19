@@ -1,4 +1,4 @@
-import 'package:cluck/screens/homescreen.dart';
+import 'package:cluck/screens/home/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:cluck/utils/colors.dart' as colors;
 void main() {
