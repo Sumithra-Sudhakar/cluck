@@ -40,7 +40,7 @@ class _SettingsState extends State<Settings> {
       body: const CustomSliverView(
         columnList: [
           BatchCard(),
-          CoopCard(isnormal: true)
+          CoopCard(isNormal: true)
         ],
       ),
     );
