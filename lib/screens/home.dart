@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:cluck/screens/login.dart';
 import 'package:cluck/screens/settings.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
@@ -17,10 +19,19 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  String formattedDate = "";
+
+  @override
+  void initState(){
+    formattedDate = DateFormat('kk:mm:ss').format(DateTime.now());
+    Timer.periodic(const Duration(seconds: 1), (Timer t) => _getTime());
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    DateTime now = DateTime.now();
-    String formattedDate = DateFormat('kk.mm').format(now);
+
     return DefaultTabController(
 
       length: 2,
@@ -176,4 +187,17 @@ class _HomeState extends State<Home> {
       ),
     );
   }
+
+  void _getTime() {
+    final DateTime now = DateTime.now();
+    final String formattedDateTime = _formatDateTime(now);
+    setState(() {
+      formattedDate = formattedDateTime;
+    });
+  }
+
+  String _formatDateTime(DateTime dateTime) {
+    return DateFormat('kk:mm:ss').format(dateTime);
+  }
 }
+
