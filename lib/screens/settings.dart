@@ -1,7 +1,10 @@
+import 'package:cluck/widgets/batches_card.dart';
+import 'package:cluck/widgets/coop_card.dart';
+import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
-
+//TODO: COMPLETE SETTINGS PAGE
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
@@ -33,6 +36,12 @@ class _SettingsState extends State<Settings> {
               fontSize: 26,
               fontWeight: FontWeight.bold),
         ),
+      ),
+      body: CustomSliverView(
+        columnList: [
+          BatchCard(),
+          CoopCard(isnormal: true)
+        ],
       ),
     );
   }

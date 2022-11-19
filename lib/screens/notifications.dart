@@ -1,3 +1,4 @@
+import 'package:cluck/widgets/alert_card_respnded.dart';
 import 'package:cluck/widgets/batches_card.dart';
 import 'package:cluck/widgets/coop_card.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
@@ -64,7 +65,8 @@ class _NotificationsState extends State<Notifications> {
           ProximityAlert(isStray: true, isHuman: true),
           AlertCard(iscritical: true),
           AlertCard(iscritical: false),
-          AlertCard(iscritical: true),
+          AlertCardResponded(iscritical: true, accepted: false),
+          AlertCardResponded(iscritical: false, accepted: true),
           AlertCard(iscritical: true),AlertCard(iscritical: true),
           AlertCard(iscritical: false),
 

@@ -1,3 +1,4 @@
+import 'package:cluck/screens/login.dart';
 import 'package:cluck/screens/settings.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,7 @@ import 'package:intl/intl.dart';
 
 import 'loadingscreen.dart';
 import 'notifications.dart';
-
+//TODO: TOP NAVIGATION PAGES
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -54,7 +55,7 @@ class _HomeState extends State<Home> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Settings(),
+                            builder: (context) => Login(),
                           ));
                     },
                   ),

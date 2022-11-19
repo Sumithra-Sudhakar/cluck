@@ -92,18 +92,7 @@ class _BatchCardState extends State<BatchCard> {
             ),
             Row(
               children: [
-                TextButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(colors.greenbuttonbg)),
-                    child: Text(
-                      "VIEW VACCINATIONS",
-                      style: GoogleFonts.raleway(
-                        fontSize: 15,
-                        color: colors.greentext,
-                      ),
-                    )),
+
                 Spacer(),
                 Text(
                   "10-12-2021",

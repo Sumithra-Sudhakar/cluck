@@ -9,7 +9,7 @@ class CoopCard extends StatefulWidget {
   @override
   State<CoopCard> createState() => _CoopCardState();
 }
-
+//TODO: DIALOGUE BOX FOR MODIFYING COOP VALUES
 class _CoopCardState extends State<CoopCard> {
   @override
   Widget build(BuildContext context) {

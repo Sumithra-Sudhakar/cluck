@@ -75,7 +75,69 @@ class _AlertCardState extends State<AlertCard> {
                   ),
                   Spacer(),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+
+
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                insetPadding: EdgeInsets.all(20),
+                                contentPadding: EdgeInsets.all(30),
+                                elevation: 5,
+                                backgroundColor: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                title: Text(
+                                  "Are you sure you would like to accept?",
+                                  style: GoogleFonts.raleway(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: colors.primarytextcolor),
+                                ),
+                                actions: [
+                                  Row(
+                                    children: [
+                                      Spacer(),
+                                      TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text(
+                                            "NO",
+                                            style: GoogleFonts.raleway(
+                                                fontWeight: FontWeight.w500,
+                                                color: colors.errortext,
+                                                fontSize: 15),
+                                          )),
+                                      Spacer(),
+                                      TextButton(
+                                          onPressed: () {
+                                             Navigator.pop(context);},
+                                          style: ButtonStyle(
+                                              backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  colors.greencardbg)),
+                                          child: Text(
+                                            "YES",
+                                            style: GoogleFonts.raleway(
+                                              fontSize: 15,
+                                              color: colors.greentext,
+                                            ),
+                                          )),
+                                      Spacer()
+                                    ],
+                                  ),
+
+                                ],
+                              );
+                            });
+
+
+
+                      },
                       style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all(colors.redbuttonbg)),
@@ -87,7 +149,70 @@ class _AlertCardState extends State<AlertCard> {
                         ),
                       )),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+
+                        showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                insetPadding: EdgeInsets.all(20),
+                                contentPadding: EdgeInsets.all(30),
+                                elevation: 5,
+                                backgroundColor: Colors.black,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                title: Text(
+                                  "Are you sure you would like to dismiss?",
+                                  style: GoogleFonts.raleway(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
+                                      color: colors.primarytextcolor),
+                                ),
+                                actions: [
+                                  Row(
+                                    children: [
+                                      Spacer(),
+                                      TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text(
+                                            "NO",
+                                            style: GoogleFonts.raleway(
+                                                fontWeight: FontWeight.w500,
+                                                color: colors.errortext,
+                                                fontSize: 15),
+                                          )),
+                                      Spacer(),
+                                      TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);},
+                                          style: ButtonStyle(
+                                              backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  colors.greencardbg)),
+                                          child: Text(
+                                            "YES",
+                                            style: GoogleFonts.raleway(
+                                              fontSize: 15,
+                                              color: colors.greentext,
+                                            ),
+                                          )),
+                                      Spacer()
+                                    ],
+                                  ),
+
+                                ],
+                              );
+                            });
+
+
+
+
+
+                      },
                       child: Text(
                         "DISMISS",
                         style: GoogleFonts.raleway(

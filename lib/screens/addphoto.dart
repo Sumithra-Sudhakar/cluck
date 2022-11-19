@@ -209,7 +209,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                 Spacer(),
                                 TextButton(
                                     onPressed: () {
-                                      int count = 3;
+                                      int count = 2;
                                       Navigator.of(context).popUntil((_) => count-- <= 0);
                                     },
                                     style: ButtonStyle(
