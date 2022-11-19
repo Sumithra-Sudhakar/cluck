@@ -3,9 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
 
 class AlertCardResponded extends StatelessWidget {
-  final bool iscritical;
+  final bool isCritical;
   final bool accepted;
-  const AlertCardResponded({Key? key, required this.iscritical, required this.accepted}) : super(key: key);
+  const AlertCardResponded({Key? key, required this.isCritical, required this.accepted}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +15,10 @@ class AlertCardResponded extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: this.iscritical ? colors.redcardbg : colors.alertcardcolor,
+          color: isCritical ? colors.redCardBG : colors.alertCardColor,
         ),
         child: Padding(
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           child: Column(
             children: [
               Padding(
@@ -26,11 +26,11 @@ class AlertCardResponded extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      this.iscritical
+                      isCritical
                           ? "Disease detected"
                           : "Possible disease detected.",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 15,
                       ),
                     ),
@@ -44,15 +44,15 @@ class AlertCardResponded extends StatelessWidget {
                     Text(
                       "Coop 1",
                       style: GoogleFonts.raleway(
-                          color: colors.primarytextcolor,
+                          color: colors.primaryTextColor,
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       "TAG12345QWERTY123",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 15,
                       ),
                     ),
@@ -64,16 +64,16 @@ class AlertCardResponded extends StatelessWidget {
                   Text(
                     "Disease 1",
                     style: GoogleFonts.raleway(
-                      color: colors.primarytextcolor,
+                      color: colors.primaryTextColor,
                       fontSize: 15,
                     ),
                   ),
-                  Spacer(),
-                 this.accepted? Text("Accepted", style: GoogleFonts.raleway(
-                   color: colors.errortext,
+                  const Spacer(),
+                 accepted? Text("Accepted", style: GoogleFonts.raleway(
+                   color: colors.errorText,
                    fontSize: 15
                  ),):Text("Dismissed", style: GoogleFonts.raleway(
-                     color: colors.yellowtext,
+                     color: colors.yellowText,
                      fontSize: 15
                  ),)
                 ],

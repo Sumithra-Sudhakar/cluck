@@ -18,7 +18,7 @@ class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       body: Padding(
         padding: const EdgeInsets.fromLTRB(12, 12, 12, 0),
         child: CustomSliverView(columnList: [
@@ -32,7 +32,7 @@ class _NotificationsState extends State<Notifications> {
                child: Text(
                  "Alerts",
                  style: GoogleFonts.raleway(
-                     color: colors.primarytextcolor,
+                     color: colors.primaryTextColor,
                      fontWeight: FontWeight.bold,
                      fontSize: 35),
                ),
@@ -42,10 +42,10 @@ class _NotificationsState extends State<Notifications> {
              ),
              TextButton(
                style: TextButton.styleFrom(
-                 backgroundColor: colors.iconbg,
+                 backgroundColor: colors.iconBG,
                  shape: const CircleBorder(),
                ),
-               child: Icon(Icons.filter_alt_rounded, color: colors.primarytextcolor),
+               child: Icon(Icons.filter_alt_rounded, color: colors.primaryTextColor),
                onPressed: () {
                  Navigator.push(
                      context,
@@ -63,8 +63,8 @@ class _NotificationsState extends State<Notifications> {
           const ProximityAlert(isStray: true, isHuman: true),
           const AlertCard(iscritical: true),
           const AlertCard(iscritical: false),
-          const AlertCardResponded(iscritical: true, accepted: false),
-          const AlertCardResponded(iscritical: false, accepted: true),
+          const AlertCardResponded(isCritical: true, accepted: false),
+          const AlertCardResponded(isCritical: false, accepted: true),
           const AlertCard(iscritical: true),const AlertCard(iscritical: true),
           const AlertCard(iscritical: false),
 

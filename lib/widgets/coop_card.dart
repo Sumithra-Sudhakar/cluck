@@ -21,14 +21,14 @@ class _CoopCardState extends State<CoopCard> {
         width: MediaQuery.of(context).size.width * 0.45,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: widget.isnormal ? colors.greencardbg : colors.alertcardcolor,
+          color: widget.isnormal ? colors.greenCardBG : colors.alertCardColor,
         ),
         child: Padding(
-          padding: EdgeInsets.all(14),
+          padding: const EdgeInsets.all(14),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
@@ -36,7 +36,7 @@ class _CoopCardState extends State<CoopCard> {
                   style: GoogleFonts.raleway(
                     fontSize: 18,
                     color:
-                        widget.isnormal ? colors.greentext : colors.yellowtext,
+                        widget.isnormal ? colors.greenText : colors.yellowText,
                   ),
                 ),
               ),
@@ -48,16 +48,16 @@ class _CoopCardState extends State<CoopCard> {
                       Icon(
                         Icons.stay_current_portrait_outlined,
                         color: widget.isnormal
-                            ? colors.greentext
-                            : colors.yellowtext,
+                            ? colors.greenText
+                            : colors.yellowText,
                         size: 40,
                       ),
                       Text(
                         "28",
                         style: GoogleFonts.poppins(
                             color: widget.isnormal
-                                ? colors.greentext
-                                : colors.yellowtext,
+                                ? colors.greenText
+                                : colors.yellowText,
                             fontSize: 40,
                             fontWeight: FontWeight.bold),
                       )
@@ -70,33 +70,33 @@ class _CoopCardState extends State<CoopCard> {
                   Icon(
                     Icons.animation_outlined,
                     color:
-                        widget.isnormal ? colors.greentext : colors.yellowtext,
+                        widget.isnormal ? colors.greenText : colors.yellowText,
                   ),
                   Text(
                     "120",
                     style: GoogleFonts.raleway(
                         color: widget.isnormal
-                            ? colors.greentext
-                            : colors.yellowtext,
+                            ? colors.greenText
+                            : colors.yellowText,
                         fontSize: 20),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Icon(
                     Icons.fastfood_sharp,
                     color:
-                        widget.isnormal ? colors.greentext : colors.yellowtext,
+                        widget.isnormal ? colors.greenText : colors.yellowText,
                   ),
                   Text(
                     "50kg",
                     style: GoogleFonts.raleway(
                         color: widget.isnormal
-                            ? colors.greentext
-                            : colors.yellowtext,
+                            ? colors.greenText
+                            : colors.yellowText,
                         fontSize: 20),
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
             ],
           ),
         ),

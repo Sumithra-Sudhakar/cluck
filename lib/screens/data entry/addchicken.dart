@@ -14,23 +14,23 @@ class _AddChickenState extends State<AddChicken> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: colors.scaffoldcolor,
+        backgroundColor: colors.scaffoldColor,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_ios,
-            color: colors.primarytextcolor,
+            color: colors.primaryTextColor,
           ),
         ),
         title: Text(
           "Add new chicken",
           style: GoogleFonts.raleway(
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
               fontSize: 26,
               fontWeight: FontWeight.bold),
         ),
@@ -46,7 +46,7 @@ class _AddChickenState extends State<AddChicken> {
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: colors.proximitycardbg,
+                color: colors.proximityCardBG,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -58,7 +58,7 @@ class _AddChickenState extends State<AddChicken> {
                       alignment: Alignment.topLeft,
                       child: Text("RFID",
                           style: GoogleFonts.raleway(
-                              color: colors.primarytextcolor,
+                              color: colors.primaryTextColor,
                               fontSize: 15,
                               fontWeight: FontWeight.bold)),
                     ),
@@ -67,7 +67,7 @@ class _AddChickenState extends State<AddChicken> {
                       child: Text(
                         "TAG12345QWERTY123",
                         style: GoogleFonts.raleway(
-                            color: colors.primarytextcolor, fontSize: 22),
+                            color: colors.primaryTextColor, fontSize: 22),
                       ),
                     )
                   ],
@@ -82,7 +82,7 @@ class _AddChickenState extends State<AddChicken> {
             width: MediaQuery.of(context).size.width * 0.8,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: colors.proximitycardbg,
+              color: colors.proximityCardBG,
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -94,7 +94,7 @@ class _AddChickenState extends State<AddChicken> {
                     alignment: Alignment.topLeft,
                     child: Text("WEIGHT",
                         style: GoogleFonts.raleway(
-                            color: colors.primarytextcolor,
+                            color: colors.primaryTextColor,
                             fontSize: 15,
                             fontWeight: FontWeight.bold)),
                   ),
@@ -103,7 +103,7 @@ class _AddChickenState extends State<AddChicken> {
                     child: Text(
                       "0.750 kg",
                       style: GoogleFonts.raleway(
-                          color: colors.primarytextcolor, fontSize: 22),
+                          color: colors.primaryTextColor, fontSize: 22),
                     ),
                   )
                 ],
@@ -122,7 +122,7 @@ class _AddChickenState extends State<AddChicken> {
                     "RETRY",
                     style: GoogleFonts.raleway(
                       fontSize: 18,
-                      color: colors.greentext,
+                      color: colors.greenText,
                     ),
                   )),
               const Spacer(),
@@ -130,12 +130,12 @@ class _AddChickenState extends State<AddChicken> {
                   onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(colors.greencardbg)),
+                          MaterialStateProperty.all(colors.greenCardBG)),
                   child: Text(
                     "CONFIRM",
                     style: GoogleFonts.raleway(
                       fontSize: 18,
-                      color: colors.greentext,
+                      color: colors.greenText,
                     ),
                   )),
               const Spacer()

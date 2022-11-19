@@ -13,14 +13,14 @@ class VaccinationCard extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: colors.proximitycardbg,
+          color: colors.proximityCardBG,
         ),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Spacer(),
+              const Spacer(),
               Column(
                 children: [
                   Align(
@@ -28,7 +28,7 @@ class VaccinationCard extends StatelessWidget {
                     child: Text(
                       "Vaccine ",
                       style: GoogleFonts.raleway(
-                          color: colors.primarytextcolor,
+                          color: colors.primaryTextColor,
                           fontSize: 18,
                           fontWeight: FontWeight.w500),
                     ),
@@ -38,7 +38,7 @@ class VaccinationCard extends StatelessWidget {
                     child: Text(
                       "Dr. Manish Venkatachalam",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 12,
                       ),
                     ),
@@ -52,22 +52,22 @@ class VaccinationCard extends StatelessWidget {
                 children: [
                   Text("11-11-2022",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 12,
                       )),
                   Text("B12",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 12,
                       )),
                   Text("Disease",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 15,
                       )),
                 ],
               ),
-              Spacer()
+              const Spacer()
             ],
           ),
         ),

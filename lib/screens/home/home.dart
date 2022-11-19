@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
 
       length: 2,
       child: Scaffold(
-        backgroundColor: colors.scaffoldcolor,
+        backgroundColor: colors.scaffoldColor,
         body: CustomSliverView(
           columnList: [
             const SizedBox(
@@ -47,7 +47,7 @@ class _HomeState extends State<Home> {
                   Text(
                     "WELCOME",
                     style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontWeight: FontWeight.w600,
                         fontSize: 20),
                   ),
@@ -56,10 +56,10 @@ class _HomeState extends State<Home> {
                   ),
                   TextButton(
                     style: TextButton.styleFrom(
-                      backgroundColor: colors.iconbg,
+                      backgroundColor: colors.iconBG,
                       shape: const CircleBorder(),
                     ),
-                    child: Icon(Icons.settings, color: colors.primarytextcolor),
+                    child: Icon(Icons.settings, color: colors.primaryTextColor),
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> {
                               fontFamily: '.SF Pro Text',
                               fontSize: 50,
                               fontWeight: FontWeight.w400,
-                              color: colors.primarytextcolor),
+                              color: colors.primaryTextColor),
                         ),
                         const Spacer(
                           flex: 4,
@@ -98,13 +98,13 @@ class _HomeState extends State<Home> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 shape: BoxShape.rectangle,
-                                color: colors.greencardbg,
+                                color: colors.greenCardBG,
                                 border: Border.all(
                                   width: 1,
                                 )),
                             child: Icon(
                               Icons.add,
-                              color: colors.greentext,
+                              color: colors.greenText,
                               size: 40,
                             ),
                           ),
@@ -127,7 +127,7 @@ class _HomeState extends State<Home> {
                       style: GoogleFonts.raleway(
                           fontWeight: FontWeight.w600,
                           fontSize: 18,
-                          color: colors.primarytextcolor),
+                          color: colors.primaryTextColor),
                     ),
                     const SizedBox(
                       height: 10,
@@ -137,7 +137,7 @@ class _HomeState extends State<Home> {
                       style: GoogleFonts.raleway(
                           fontWeight: FontWeight.w400,
                           fontSize: 15,
-                          color: colors.primarytextcolor),
+                          color: colors.primaryTextColor),
                     )
                   ],
                 ),
@@ -146,18 +146,18 @@ class _HomeState extends State<Home> {
             Expanded(
               flex: 1,
               child: AppBar(
-                backgroundColor: colors.scaffoldcolor,
+                backgroundColor: colors.scaffoldColor,
                 bottom: TabBar(
                   unselectedLabelColor: Colors.white54,
                   indicatorSize: TabBarIndicatorSize.label,
-                  indicatorColor: colors.primarytextcolor,
+                  indicatorColor: colors.primaryTextColor,
                   tabs: [
                     Tab(
                       child: Text(
                         "COOP",
                         style: GoogleFonts.raleway(
                           fontSize: 15,
-                          color: colors.primarytextcolor,
+                          color: colors.primaryTextColor,
                         ),
                       ),
                     ),
@@ -166,7 +166,7 @@ class _HomeState extends State<Home> {
                         "BATCHES",
                         style: GoogleFonts.raleway(
                           fontSize: 15,
-                          color: colors.primarytextcolor,
+                          color: colors.primaryTextColor,
                         ),
                       ),
                     )

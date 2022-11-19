@@ -17,7 +17,7 @@ class _AddPhotoState extends State<AddPhoto> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       body: CustomSliverView(
         columnList: [
           SizedBox(
@@ -32,7 +32,7 @@ class _AddPhotoState extends State<AddPhoto> {
                 style: GoogleFonts.raleway(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    color: colors.primarytextcolor),
+                    color: colors.primaryTextColor),
               ),
             ),
           ),
@@ -48,7 +48,7 @@ class _AddPhotoState extends State<AddPhoto> {
                   style: GoogleFonts.raleway(
                       fontSize: 15,
                       fontWeight: FontWeight.w300,
-                      color: colors.primarytextcolor),
+                      color: colors.primaryTextColor),
                 ),
                 const Spacer(),
                 Text(
@@ -56,7 +56,7 @@ class _AddPhotoState extends State<AddPhoto> {
                   style: GoogleFonts.raleway(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: colors.primarytextcolor),
+                      color: colors.primaryTextColor),
                 ),
               ],
             ),
@@ -68,7 +68,7 @@ class _AddPhotoState extends State<AddPhoto> {
             child: Container(
               height: MediaQuery.of(context).size.height * 0.65,
               width: MediaQuery.of(context).size.width * 0.8,
-              color: colors.greencardbg,
+              color: colors.greenCardBG,
             ),
           ),
           Row(
@@ -97,7 +97,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                 style: GoogleFonts.raleway(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
-                                    color: colors.primarytextcolor),
+                                    color: colors.primaryTextColor),
                               ),
                               actions: [
                                 Row(
@@ -111,7 +111,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                           "CANCEL",
                                           style: GoogleFonts.raleway(
                                               fontWeight: FontWeight.w500,
-                                              color: colors.greentext,
+                                              color: colors.greenText,
                                               fontSize: 15),
                                         )),
                                     const Spacer(),
@@ -122,12 +122,12 @@ class _AddPhotoState extends State<AddPhoto> {
                                         style: ButtonStyle(
                                             backgroundColor:
                                             MaterialStateProperty.all(
-                                                colors.redcardbg)),
+                                                colors.redCardBG)),
                                         child: Text(
                                           "ADD MORE",
                                           style: GoogleFonts.raleway(
                                             fontSize: 15,
-                                            color: colors.errortext,
+                                            color: colors.errorText,
                                           ),
                                         )),
                                     const Spacer()
@@ -142,7 +142,7 @@ class _AddPhotoState extends State<AddPhoto> {
                       "Report disease",
                       style: GoogleFonts.raleway(
                           fontWeight: FontWeight.w500,
-                          color: colors.errortext,
+                          color: colors.errorText,
                           fontSize: 15),
                     )),
               )
@@ -165,7 +165,7 @@ class _AddPhotoState extends State<AddPhoto> {
                     "RETRY",
                     style: GoogleFonts.raleway(
                       fontSize: 15,
-                      color: colors.greentext,
+                      color: colors.greenText,
                     ),
                   )),
               const SizedBox(
@@ -189,7 +189,7 @@ class _AddPhotoState extends State<AddPhoto> {
                             style: GoogleFonts.raleway(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
-                                color: colors.primarytextcolor),
+                                color: colors.primaryTextColor),
                           ),
                           actions: [
                             Row(
@@ -203,7 +203,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                       "END",
                                       style: GoogleFonts.raleway(
                                           fontWeight: FontWeight.w500,
-                                          color: colors.errortext,
+                                          color: colors.errorText,
                                           fontSize: 15),
                                     )),
                                 const Spacer(),
@@ -215,12 +215,12 @@ class _AddPhotoState extends State<AddPhoto> {
                                     style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                colors.greencardbg)),
+                                                colors.greenCardBG)),
                                     child: Text(
                                       "ADD MORE",
                                       style: GoogleFonts.raleway(
                                         fontSize: 15,
-                                        color: colors.greentext,
+                                        color: colors.greenText,
                                       ),
                                     )),
                                 const Spacer()
@@ -233,12 +233,12 @@ class _AddPhotoState extends State<AddPhoto> {
                 },
                 style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all(colors.greencardbg)),
+                        MaterialStateProperty.all(colors.greenCardBG)),
                 child: Text(
                   "CONFIRM",
                   style: GoogleFonts.raleway(
                     fontSize: 15,
-                    color: colors.greentext,
+                    color: colors.greenText,
                   ),
                 ),
               ),

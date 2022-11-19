@@ -12,17 +12,17 @@ class Manage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       appBar: AppBar(
         title: Text(
           "Manage",
           style: GoogleFonts.raleway(
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
               fontWeight: FontWeight.bold,
               fontSize: 35),
         ),
         elevation: 0,
-        backgroundColor: colors.scaffoldcolor,
+        backgroundColor: colors.scaffoldColor,
         automaticallyImplyLeading: false,
       ),
       body: Padding(
@@ -43,7 +43,7 @@ class Manage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 9,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: colors.proximitycardbg,
+                    color: colors.proximityCardBG,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(12, 12, 0, 12),
@@ -61,7 +61,7 @@ class Manage extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               bottomLeft: Radius.circular(10),
                             ),
-                            color: colors.managecadrbg,
+                            color: colors.manageCardBG,
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -75,7 +75,7 @@ class Manage extends StatelessWidget {
                                     overflow: TextOverflow.visible,
                                     style: GoogleFonts.raleway(
                                         fontSize: 18,
-                                        color: colors.primarytextcolor,
+                                        color: colors.primaryTextColor,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -88,7 +88,7 @@ class Manage extends StatelessWidget {
                                     "Register tag, and initial weight for\n incoming batches ",
                                     style: GoogleFonts.raleway(
                                       fontSize: 12,
-                                      color: colors.primarytextcolor,
+                                      color: colors.primaryTextColor,
                                     ),
                                   ),
                                 ),
@@ -116,7 +116,7 @@ class Manage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 9,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: colors.proximitycardbg,
+                    color: colors.proximityCardBG,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(12, 12, 0, 12),
@@ -133,7 +133,7 @@ class Manage extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               bottomLeft: Radius.circular(10),
                             ),
-                            color: colors.managecadrbg,
+                            color: colors.manageCardBG,
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -147,7 +147,7 @@ class Manage extends StatelessWidget {
                                     overflow: TextOverflow.visible,
                                     style: GoogleFonts.raleway(
                                         fontSize: 18,
-                                        color: colors.primarytextcolor,
+                                        color: colors.primaryTextColor,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -160,7 +160,7 @@ class Manage extends StatelessWidget {
                                     "Record weight and assess for diseases",
                                     style: GoogleFonts.raleway(
                                       fontSize: 12,
-                                      color: colors.primarytextcolor,
+                                      color: colors.primaryTextColor,
                                     ),
                                   ),
                                 ),
@@ -185,7 +185,7 @@ class Manage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 9,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: colors.proximitycardbg,
+                    color: colors.proximityCardBG,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(12, 12, 0, 12),
@@ -203,7 +203,7 @@ class Manage extends StatelessWidget {
                               topLeft: Radius.circular(10),
                               bottomLeft: Radius.circular(10),
                             ),
-                            color: colors.managecadrbg,
+                            color: colors.manageCardBG,
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -217,7 +217,7 @@ class Manage extends StatelessWidget {
                                     overflow: TextOverflow.visible,
                                     style: GoogleFonts.raleway(
                                         fontSize: 18,
-                                        color: colors.primarytextcolor,
+                                        color: colors.primaryTextColor,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -230,7 +230,7 @@ class Manage extends StatelessWidget {
                                     "Review vaccination details, \nadd vaccination records",
                                     style: GoogleFonts.raleway(
                                       fontSize: 12,
-                                      color: colors.primarytextcolor,
+                                      color: colors.primaryTextColor,
                                     ),
                                   ),
                                 ),

@@ -1,13 +1,7 @@
-import 'package:cluck/screens/data%20entry/addphoto.dart';
 import 'package:cluck/screens/home/manage.dart';
-import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
-import 'package:intl/intl.dart';
-
 import 'home.dart';
-import '../loadingscreen.dart';
 import 'notifications.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,8 +16,6 @@ class _HomePageState extends State<HomePage> {
   static const List<Widget> _pages = [Home(), Notifications(), Manage()];
   @override
   Widget build(BuildContext context) {
-    DateTime now = DateTime.now();
-    String formattedDate = DateFormat('kk.mm').format(now);
     return Scaffold(
         bottomNavigationBar: SizedBox(
           height: 70,
@@ -32,29 +24,29 @@ class _HomePageState extends State<HomePage> {
             currentIndex: _selectedIndex, //New
             onTap: _onItemTapped,
             elevation: 4,
-            backgroundColor: colors.bottomnavigationbg,
+            backgroundColor: colors.bottomNavigationBG,
 
-            selectedItemColor: colors.primarytextcolor,
+            selectedItemColor: colors.primaryTextColor,
             unselectedItemColor: Colors.white54,
 
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: const Icon(Icons.home),
                 label: 'Home',
-                backgroundColor: colors.scaffoldcolor,
+                backgroundColor: colors.scaffoldColor,
               ),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.notifications_none),
+                  icon: const Icon(Icons.notifications_none),
                   label: 'Alert',
-                  backgroundColor: colors.scaffoldcolor),
+                  backgroundColor: colors.scaffoldColor),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   label: 'Manage',
-                  backgroundColor: colors.scaffoldcolor),
+                  backgroundColor: colors.scaffoldColor),
             ],
           ),
         ),
-        backgroundColor: colors.scaffoldcolor,
+        backgroundColor: colors.scaffoldColor,
         body: _pages[_selectedIndex]);
   }
 

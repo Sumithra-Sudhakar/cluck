@@ -16,7 +16,7 @@ class _BatchCardState extends State<BatchCard> {
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: colors.greencardbg,
+          color: colors.greenCardBG,
         ),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -30,19 +30,19 @@ class _BatchCardState extends State<BatchCard> {
                   "Batch 1",
                   textAlign: TextAlign.start,
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.primarytextcolor),
+                      fontSize: 18, color: colors.primaryTextColor),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 4,
                 ),
                 Icon(
                   Icons.animation_outlined,
-                  color: colors.greentext,
+                  color: colors.greenText,
                 ),
                 Text(
                   "100/400",
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.greentext),
+                      fontSize: 18, color: colors.greenText),
                 ),
               ],
             ),
@@ -52,19 +52,19 @@ class _BatchCardState extends State<BatchCard> {
                   "Breed name 1",
                   textAlign: TextAlign.start,
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.primarytextcolor),
+                      fontSize: 18, color: colors.primaryTextColor),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 4,
                 ),
                 Icon(
                   Icons.animation_outlined,
-                  color: colors.errortext,
+                  color: colors.errorText,
                 ),
                 Text(
                   "20",
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.errortext),
+                      fontSize: 18, color: colors.errorText),
                 ),
               ],
             ),
@@ -74,31 +74,31 @@ class _BatchCardState extends State<BatchCard> {
                   "Coop 1",
                   textAlign: TextAlign.start,
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.primarytextcolor),
+                      fontSize: 18, color: colors.primaryTextColor),
                 ),
-                Spacer(
+                const Spacer(
                   flex: 4,
                 ),
                 Icon(
                   Icons.animation_outlined,
-                  color: colors.yellowtext,
+                  color: colors.yellowText,
                 ),
                 Text(
                   "5",
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.yellowtext),
+                      fontSize: 18, color: colors.yellowText),
                 ),
               ],
             ),
             Row(
               children: [
 
-                Spacer(),
+                const Spacer(),
                 Text(
                   "10-12-2021",
                   textAlign: TextAlign.start,
                   style: GoogleFonts.raleway(
-                      fontSize: 18, color: colors.primarytextcolor),
+                      fontSize: 18, color: colors.primaryTextColor),
                 ),
               ],
             ),

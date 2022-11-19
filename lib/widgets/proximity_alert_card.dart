@@ -18,7 +18,7 @@ class ProximityAlert extends StatelessWidget {
         width: MediaQuery.of(context).size.width*0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color:colors.proximitycardbg,
+          color:colors.proximityCardBG,
 
 
         ),
@@ -30,7 +30,7 @@ child: Padding(
           alignment: Alignment.topLeft,
           child: Text("Stray alert", style: GoogleFonts.raleway(
             fontSize: 14,
-            color: colors.primarytextcolor,
+            color: colors.primaryTextColor,
             fontWeight: FontWeight.w400
           ),),
         ),
@@ -41,14 +41,14 @@ child: Padding(
           children: [
             Text("Coop1",style: GoogleFonts.raleway(
                 fontSize: 14,
-                color: colors.primarytextcolor,
+                color: colors.primaryTextColor,
 
             ),),
-            Spacer(),
-            Icon(this.isStray?(this.isHuman?Icons.man:Icons.animation_outlined):Icons.add, color: colors.primarytextcolor,),
-            Text(this.isStray?(this.isHuman?" Human": " Animal"):" Chicken", style: GoogleFonts.raleway(
+            const Spacer(),
+            Icon(isStray?(isHuman?Icons.man:Icons.animation_outlined):Icons.add, color: colors.primaryTextColor,),
+            Text(isStray?(isHuman?" Human": " Animal"):" Chicken", style: GoogleFonts.raleway(
               fontSize: 14,
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
 
             ))
           ],

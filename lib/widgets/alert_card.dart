@@ -20,10 +20,10 @@ class _AlertCardState extends State<AlertCard> {
         width: MediaQuery.of(context).size.width * 0.9,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: widget.iscritical ? colors.redcardbg : colors.alertcardcolor,
+          color: widget.iscritical ? colors.redCardBG : colors.alertCardColor,
         ),
         child: Padding(
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           child: Column(
             children: [
               Padding(
@@ -35,7 +35,7 @@ class _AlertCardState extends State<AlertCard> {
                           ? "Disease detected"
                           : "Possible disease detected.",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 15,
                       ),
                     ),
@@ -49,15 +49,15 @@ class _AlertCardState extends State<AlertCard> {
                     Text(
                       "Coop 1",
                       style: GoogleFonts.raleway(
-                          color: colors.primarytextcolor,
+                          color: colors.primaryTextColor,
                           fontSize: 15,
                           fontWeight: FontWeight.bold),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       "TAG12345QWERTY123",
                       style: GoogleFonts.raleway(
-                        color: colors.primarytextcolor,
+                        color: colors.primaryTextColor,
                         fontSize: 15,
                       ),
                     ),
@@ -69,11 +69,11 @@ class _AlertCardState extends State<AlertCard> {
                   Text(
                     "Disease 1",
                     style: GoogleFonts.raleway(
-                      color: colors.primarytextcolor,
+                      color: colors.primaryTextColor,
                       fontSize: 15,
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   TextButton(
                       onPressed: () {
 
@@ -83,8 +83,8 @@ class _AlertCardState extends State<AlertCard> {
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
-                                insetPadding: EdgeInsets.all(20),
-                                contentPadding: EdgeInsets.all(30),
+                                insetPadding: const EdgeInsets.all(20),
+                                contentPadding: const EdgeInsets.all(30),
                                 elevation: 5,
                                 backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
@@ -95,12 +95,12 @@ class _AlertCardState extends State<AlertCard> {
                                   style: GoogleFonts.raleway(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
-                                      color: colors.primarytextcolor),
+                                      color: colors.primaryTextColor),
                                 ),
                                 actions: [
                                   Row(
                                     children: [
-                                      Spacer(),
+                                      const Spacer(),
                                       TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);
@@ -109,25 +109,25 @@ class _AlertCardState extends State<AlertCard> {
                                             "NO",
                                             style: GoogleFonts.raleway(
                                                 fontWeight: FontWeight.w500,
-                                                color: colors.errortext,
+                                                color: colors.errorText,
                                                 fontSize: 15),
                                           )),
-                                      Spacer(),
+                                      const Spacer(),
                                       TextButton(
                                           onPressed: () {
                                              Navigator.pop(context);},
                                           style: ButtonStyle(
                                               backgroundColor:
                                               MaterialStateProperty.all(
-                                                  colors.greencardbg)),
+                                                  colors.greenCardBG)),
                                           child: Text(
                                             "YES",
                                             style: GoogleFonts.raleway(
                                               fontSize: 15,
-                                              color: colors.greentext,
+                                              color: colors.greenText,
                                             ),
                                           )),
-                                      Spacer()
+                                      const Spacer()
                                     ],
                                   ),
 
@@ -140,12 +140,12 @@ class _AlertCardState extends State<AlertCard> {
                       },
                       style: ButtonStyle(
                           backgroundColor:
-                              MaterialStateProperty.all(colors.redbuttonbg)),
+                              MaterialStateProperty.all(colors.redButtonBG)),
                       child: Text(
                         "ACCEPT",
                         style: GoogleFonts.raleway(
                           fontSize: 15,
-                          color: colors.errortext,
+                          color: colors.errorText,
                         ),
                       )),
                   TextButton(
@@ -156,8 +156,8 @@ class _AlertCardState extends State<AlertCard> {
                             context: context,
                             builder: (BuildContext context) {
                               return AlertDialog(
-                                insetPadding: EdgeInsets.all(20),
-                                contentPadding: EdgeInsets.all(30),
+                                insetPadding: const EdgeInsets.all(20),
+                                contentPadding: const EdgeInsets.all(30),
                                 elevation: 5,
                                 backgroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
@@ -168,12 +168,12 @@ class _AlertCardState extends State<AlertCard> {
                                   style: GoogleFonts.raleway(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
-                                      color: colors.primarytextcolor),
+                                      color: colors.primaryTextColor),
                                 ),
                                 actions: [
                                   Row(
                                     children: [
-                                      Spacer(),
+                                      const Spacer(),
                                       TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);
@@ -182,25 +182,25 @@ class _AlertCardState extends State<AlertCard> {
                                             "NO",
                                             style: GoogleFonts.raleway(
                                                 fontWeight: FontWeight.w500,
-                                                color: colors.errortext,
+                                                color: colors.errorText,
                                                 fontSize: 15),
                                           )),
-                                      Spacer(),
+                                      const Spacer(),
                                       TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);},
                                           style: ButtonStyle(
                                               backgroundColor:
                                               MaterialStateProperty.all(
-                                                  colors.greencardbg)),
+                                                  colors.greenCardBG)),
                                           child: Text(
                                             "YES",
                                             style: GoogleFonts.raleway(
                                               fontSize: 15,
-                                              color: colors.greentext,
+                                              color: colors.greenText,
                                             ),
                                           )),
-                                      Spacer()
+                                      const Spacer()
                                     ],
                                   ),
 
@@ -217,7 +217,7 @@ class _AlertCardState extends State<AlertCard> {
                         "DISMISS",
                         style: GoogleFonts.raleway(
                           fontSize: 15,
-                          color: colors.yellowtext,
+                          color: colors.yellowText,
                         ),
                       )),
                 ],

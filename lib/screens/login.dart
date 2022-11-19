@@ -17,7 +17,7 @@ class _LoginState extends State<Login> {
     List list = ["u1", "u2"];
     String selected ="u12";
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: CustomSliverView(
@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
               child: Text(
                 "Choose your username",
                 style: GoogleFonts.raleway(
-                    color: colors.primarytextcolor,
+                    color: colors.primaryTextColor,
                     fontSize: 20,
                     fontWeight: FontWeight.bold),
               ),

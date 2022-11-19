@@ -10,35 +10,35 @@ class Vaccination extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: colors.scaffoldcolor,
+        backgroundColor: colors.scaffoldColor,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_ios,
-            color: colors.primarytextcolor,
+            color: colors.primaryTextColor,
           ),
         ),
         title: Text(
           "Vaccinations",
           style: GoogleFonts.raleway(
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
               fontSize: 26,
               fontWeight: FontWeight.bold),
         ),
         actions: [
           TextButton(
             style: TextButton.styleFrom(
-              backgroundColor: colors.greenbuttonbg,
+              backgroundColor: colors.greenButtonBG,
               shape: const CircleBorder(),
             ),
             child: Icon(
               Icons.add,
-              color: colors.greentext,
+              color: colors.greenText,
               size: 35,
             ),
             onPressed: () {},

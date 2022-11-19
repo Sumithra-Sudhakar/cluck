@@ -22,7 +22,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (BuildContext context) => AddPhoto())));
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -31,7 +31,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
             flex: 4,
           ),
           CircularProgressIndicator(
-            color: colors.primarytextcolor,
+            color: colors.primaryTextColor,
             strokeWidth: 2.0,
           ),
           SizedBox(
@@ -40,7 +40,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
           Text(
             "Please wait, loading...",
             style: GoogleFonts.raleway(
-                color: colors.primarytextcolor,
+                color: colors.primaryTextColor,
                 fontWeight: FontWeight.bold,
                 fontSize: 18),
           ),
@@ -54,7 +54,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
               textAlign: TextAlign.center,
 
               style: GoogleFonts.raleway(
-                  color: colors.primarytextcolor,
+                  color: colors.primaryTextColor,
 fontWeight: FontWeight.w100,
                   fontSize: 18),
             ),

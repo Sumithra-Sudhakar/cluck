@@ -13,23 +13,23 @@ class _AddBatchState extends State<AddBatch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colors.scaffoldcolor,
+      backgroundColor: colors.scaffoldColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: colors.scaffoldcolor,
+        backgroundColor: colors.scaffoldColor,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
           },
           icon: Icon(
             Icons.arrow_back_ios,
-            color: colors.primarytextcolor,
+            color: colors.primaryTextColor,
           ),
         ),
         title: Text(
           "Add new batch",
           style: GoogleFonts.raleway(
-              color: colors.primarytextcolor,
+              color: colors.primaryTextColor,
               fontSize: 26,
               fontWeight: FontWeight.bold),
         ),
