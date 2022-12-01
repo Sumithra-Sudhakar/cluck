@@ -15,3 +15,5 @@ var redButtonBG = const Color(0xff352626);
 var proximityCardBG = const Color(0xff1F1F1F);
 var bottomNavigationBG = const Color(0xff242424);
 var manageCardBG = const Color(0xff272727);
+var textBoxTextColor = const Color(0xff797979);
+var textBoxColor = const Color(0xff1F1F1F);

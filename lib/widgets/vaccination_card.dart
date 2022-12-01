@@ -22,11 +22,13 @@ class VaccinationCard extends StatelessWidget {
             children: [
               const Spacer(),
               Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       "Vaccine ",
+                      textAlign: TextAlign.start,
                       style: GoogleFonts.raleway(
                           color: colors.primaryTextColor,
                           fontSize: 18,

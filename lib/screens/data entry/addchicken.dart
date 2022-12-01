@@ -127,7 +127,9 @@ class _AddChickenState extends State<AddChicken> {
                   )),
               const Spacer(),
               TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(colors.greenCardBG)),

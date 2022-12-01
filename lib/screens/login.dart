@@ -1,3 +1,5 @@
+import 'package:cluck/widgets/batches_card.dart';
+import 'package:cluck/widgets/coop_card.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -38,8 +40,9 @@ class _LoginState extends State<Login> {
             Spacer(),
 
 
-           //TODO: LOGIN SCREEN
-
+           BatchCard(),
+            CoopCard(isNormal: true),
+            CoopCard(isNormal: false)
 
 
 
