@@ -1,4 +1,5 @@
 import 'package:cluck/screens/home/homescreen.dart';
+import 'package:cluck/screens/home/manage.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:cluck/widgets/dropdown_widget.dart';
 import 'package:flutter/material.dart';
@@ -127,17 +128,13 @@ class _UpdateBatchMainState extends State<UpdateBatchMain> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomePage(),
-                          ));
+                       Navigator.pop(context);
                     },
                     style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(colors.greenCardBG)),
                     child: Text(
-                      "CONFIRM",
+                      "UPDATE",
                       style: GoogleFonts.raleway(
                         fontSize: 15,
                         color: colors.greenText,

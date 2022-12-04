@@ -1,3 +1,4 @@
+import 'package:cluck/widgets/date_picker.dart';
 import 'package:cluck/widgets/textbox_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -6,7 +7,7 @@ import 'package:cluck/utils/colors.dart' as colors;
 import '../../widgets/custom_sliver_widget.dart';
 import '../../widgets/dropdown_widget.dart';
 
-//TODO: COMPLETE NEW BATCH PAGE
+
 class AddBatch extends StatefulWidget {
   const AddBatch({Key? key}) : super(key: key);
 
@@ -45,16 +46,20 @@ class _AddBatchState extends State<AddBatch> {
       ),
       body: CustomSliverView(
         columnList: [
-          TextBoxField(
+          const TextBoxField(
               title: "Batch Name",
               hint: "Enter Batch Name",
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               light: false),
-          TextBoxField(
+         const  TextBoxField(
               title: "Bird Count",
               hint: "Enter number of new birds",
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               light: false),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            child: DatePickerWidget(context: context),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
             child: dropDown(coop, chosenOptionCoop, (item) {

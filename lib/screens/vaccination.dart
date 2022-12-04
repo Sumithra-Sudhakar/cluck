@@ -1,3 +1,4 @@
+import 'package:cluck/screens/data%20entry/addvaccination.dart';
 import 'package:cluck/widgets/custom_sliver_widget.dart';
 import 'package:cluck/widgets/vaccination_card.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,9 @@ class Vaccination extends StatelessWidget {
               color: colors.greenText,
               size: 35,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const AddVaccination(),));
+            },
           ),
           const SizedBox(
             width: 20,

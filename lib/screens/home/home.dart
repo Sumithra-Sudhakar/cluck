@@ -59,7 +59,7 @@ class _HomeState extends State<Home> {
                       backgroundColor: colors.iconBG,
                       shape: const CircleBorder(),
                     ),
-                    child: Icon(Icons.settings, color: colors.primaryTextColor),
+                    child: Icon(Icons.logout, color: colors.primaryTextColor),
                     onPressed: () {
                       Navigator.push(
                           context,
