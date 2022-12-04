@@ -16,14 +16,19 @@ class OTPInput extends StatelessWidget {
         autofocus: autoFocus,
         textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
+        style: GoogleFonts.raleway(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 20.0),
         controller: controller,
         maxLength: 1,
         cursorColor: colors.primaryTextColor,
         decoration: InputDecoration(
-            border: const OutlineInputBorder(),
+            border: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white, width: 1.0, style: BorderStyle.solid)
+            ),
+            fillColor: colors.textBoxColor,
+            filled: true,
             counterText: '',
             hintStyle: GoogleFonts.raleway(
-                color: colors.textBoxColor, fontSize: 20.0)),
+                color: colors.textBoxTextColor, fontSize: 24.0,fontWeight: FontWeight.w600)),
         onChanged: (value) {
           if (value.length == 1) {
             FocusScope.of(context).nextFocus();

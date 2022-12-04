@@ -39,35 +39,38 @@ class _HomeState extends State<Home> {
               height: 30,
             ),
             Expanded(
-              child: Row(
-                children: [
-                  const Spacer(),
-                  Text(
-                    "WELCOME",
-                    style: GoogleFonts.raleway(
-                        color: colors.primaryTextColor,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 20),
-                  ),
-                  const Spacer(
-                    flex: 5,
-                  ),
-                  TextButton(
-                    style: TextButton.styleFrom(
-                      backgroundColor: colors.iconBG,
-                      shape: const CircleBorder(),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "WELCOME",
+                      style: GoogleFonts.raleway(
+                          color: colors.primaryTextColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 20),
                     ),
-                    child: Icon(Icons.logout, color: colors.primaryTextColor),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Login(),
-                          ));
-                    },
-                  ),
-                  const Spacer()
-                ],
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: colors.iconBG,
+                          padding:  const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+                          shape: const CircleBorder(),
+                        ),
+                        child: Icon(Icons.logout, color: colors.primaryTextColor),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Login(),
+                              ));
+                        },
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Expanded(

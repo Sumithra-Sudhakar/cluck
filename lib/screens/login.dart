@@ -23,6 +23,7 @@ class _LoginState extends State<Login> {
   final TextEditingController _fieldTwo = TextEditingController();
   final TextEditingController _fieldThree = TextEditingController();
   final TextEditingController _fieldFour = TextEditingController();
+  final TextEditingController _fieldFive = TextEditingController();
    @override
   Widget build(BuildContext context) {
 
@@ -33,74 +34,93 @@ class _LoginState extends State<Login> {
         child: CustomSliverView(
           columnList: [
             SizedBox(
-              height: MediaQuery.of(context).size.height*0.5,
+              height: MediaQuery.of(context).size.height*0.4,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "Choose your username",
                   style: GoogleFonts.raleway(
                       color: colors.primaryTextColor,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold),
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600),
                 ),
               ),
             ),
 
 
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
               child: dropDown(user, chosenOptionUser, (item) {
                 setState(() {
                   chosenOptionUser= item;
                 });
               }),
             ),
+            SizedBox(height: MediaQuery.of(context).size.height*0.10,),
             Padding(
-              padding: const EdgeInsets.only(top: 90.0),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Enter your PIN",
+                  style: GoogleFonts.raleway(
+                      color: colors.primaryTextColor,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   OTPInput(_fieldOne, true),
                   OTPInput(_fieldTwo, false),
                   OTPInput(_fieldThree, false),
-                  OTPInput(_fieldFour, false)
+                  OTPInput(_fieldFour, false),
+                  OTPInput(_fieldFive, false)
                 ],
               ),
             ),
 
-        Align(
-          alignment: Alignment.bottomRight,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Spacer(
-                flex: 6,
-              ),
+        Padding(
+          padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.08),
+          child: Align(
+            alignment: Alignment.bottomRight,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Spacer(
+                  flex: 6,
+                ),
 
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                style: ButtonStyle(
-                    backgroundColor:
-                    MaterialStateProperty.all(colors.greenCardBG)),
-                child: Text(
-                  "LOGIN",
-                  style: GoogleFonts.raleway(
-                    fontSize: 15,
-                    color: colors.greenText,
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  style: ButtonStyle(
+                      backgroundColor:
+                      MaterialStateProperty.all(colors.greenCardBG),
+                  padding: MaterialStateProperty.all(const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0))),
+                  child: Text(
+                    "LOGIN",
+                    style: GoogleFonts.raleway(
+                      fontSize: 17,
+                      color: colors.greenText,
+                    ),
                   ),
                 ),
-              ),
-              const Spacer(),
-            ],
+                const Spacer(),
+              ],
+            ),
+
+
           ),
-
-
         )
 
 
