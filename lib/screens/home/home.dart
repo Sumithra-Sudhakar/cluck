@@ -8,6 +8,7 @@ import 'package:cluck/utils/colors.dart' as colors;
 import 'package:intl/intl.dart';
 
 import '../loadingscreen.dart';
+
 //TODO: TOP NAVIGATION PAGES
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -17,11 +18,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   String formattedDate = "";
 
   @override
-  void initState(){
+  void initState() {
     formattedDate = DateFormat('kk:mm:ss').format(DateTime.now());
     Timer.periodic(const Duration(seconds: 1), (Timer t) => _getTime());
     super.initState();
@@ -29,9 +29,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
-
       length: 2,
       child: Scaffold(
         backgroundColor: colors.scaffoldColor,
@@ -171,17 +169,20 @@ class _HomeState extends State<Home> {
                       ),
                     )
                   ],
-
                 ),
               ),
             ),
-            const Expanded(
-              flex: 30,
-              child: Text(""),
+            Expanded(
+              flex: 20,
+              child: Column(
+                children: [
+                  Text("1", style: TextStyle(color: colors.primaryTextColor)),
+                  Text("4")
+                ],
+              ),
             )
           ],
         ),
-
       ),
     );
   }
@@ -198,4 +199,3 @@ class _HomeState extends State<Home> {
     return DateFormat('kk:mm:ss').format(dateTime);
   }
 }
-

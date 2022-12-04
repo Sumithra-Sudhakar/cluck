@@ -18,7 +18,7 @@ Widget dropDown(listOfOptions, chosenOption, onChanged) {
               padding: EdgeInsets.only(right: 5),
               child: Icon(
                 // Add this
-                Icons.arrow_drop_down, // Add this
+                Icons.keyboard_arrow_down_outlined, // Add this
                 // color: colors.errorColor, // Add this
               ),
             ),

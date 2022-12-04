@@ -42,78 +42,66 @@ class _AddVaccinationState extends State<AddVaccination> {
               fontSize: 26,
               fontWeight: FontWeight.bold),
         ),
-      ),body: CustomSliverView(
-      columnList: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-          child: dropDown(batch, chosenOptionBatch, (item) {
-            setState(() {
-              chosenOptionBatch = item;
-            });
-          }),
-        ),
-        const TextBoxField(
-            title: "Vaccine Name",
-            hint: "Enter Vaccine Name",
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-            light: false),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-          child: DatePickerWidget(context: context),
-        ),
-        const TextBoxField(
-            title: "Dosage",
-            hint: "Enter  Dosage",
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-            light: false),
-        const TextBoxField(
-            title: "Doctor Name",
-            hint: "Enter Doctor Name",
-            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-            light: false),
-        Align(
-          alignment: Alignment.bottomRight,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Spacer(
-                flex: 6,
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 20),
-                child: TextButton(
+      ),
+      body: CustomSliverView(
+        columnList: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            child: dropDown(batch, chosenOptionBatch, (item) {
+              setState(() {
+                chosenOptionBatch = item;
+              });
+            }),
+          ),
+          const TextBoxField(
+              title: "Vaccine Name",
+              hint: "Enter Vaccine Name",
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              light: false),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+            child: DatePickerWidget(context: context),
+          ),
+          const TextBoxField(
+              title: "Dosage",
+              hint: "Enter  Dosage",
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              light: false),
+          const TextBoxField(
+              title: "Doctor Name",
+              hint: "Enter Doctor Name",
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              light: false),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Spacer(
+                  flex: 6,
+                ),
+                TextButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(colors.greenCardBG)),
                   child: Text(
-                    'Register death',
-                    style: GoogleFonts.raleway(color: colors.errorText),
+                    "UPDATE",
+                    style: GoogleFonts.raleway(
+                      fontSize: 15,
+                      color: colors.greenText,
+                    ),
                   ),
                 ),
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                style: ButtonStyle(
-                    backgroundColor:
-                    MaterialStateProperty.all(colors.greenCardBG)),
-                child: Text(
-                  "UPDATE",
-                  style: GoogleFonts.raleway(
-                    fontSize: 15,
-                    color: colors.greenText,
-                  ),
-                ),
-              ),
-              const Spacer(),
-            ],
-          ),
-        )
-      ],
-    ) ,
-
+                const Spacer(),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
