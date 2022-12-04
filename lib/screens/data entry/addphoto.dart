@@ -24,7 +24,7 @@ class _AddPhotoState extends State<AddPhoto> {
             height: MediaQuery.of(context).size.height * 0.08,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -40,7 +40,7 @@ class _AddPhotoState extends State<AddPhoto> {
             height: 10,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
               children: [
                 Text(
@@ -53,9 +53,9 @@ class _AddPhotoState extends State<AddPhoto> {
                 const Spacer(),
                 Text(
                   "1.5kg",
-                  style: GoogleFonts.raleway(
+                  style: GoogleFonts.poppins(
                       fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w500,
                       color: colors.primaryTextColor),
                 ),
               ],
@@ -93,7 +93,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                 borderRadius: BorderRadius.circular(20.0),
                               ),
                               title: Text(
-                                "Record added successfully",
+                                "Report a disease",
                                 style: GoogleFonts.raleway(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 20,
@@ -124,7 +124,7 @@ class _AddPhotoState extends State<AddPhoto> {
                                             MaterialStateProperty.all(
                                                 colors.redCardBG)),
                                         child: Text(
-                                          "ADD MORE",
+                                          "CONFIRM",
                                           style: GoogleFonts.raleway(
                                             fontSize: 15,
                                             color: colors.errorText,
