@@ -1,3 +1,4 @@
+import 'package:cluck/widgets/textbox_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cluck/utils/colors.dart' as colors;
@@ -13,6 +14,7 @@ class CoopCard extends StatefulWidget {
 }
 
 class _CoopCardState extends State<CoopCard> {
+  double _value = 10;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -280,44 +282,49 @@ class _CoopCardState extends State<CoopCard> {
                                                           )
                                                         ],
                                                       ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                    .symmetric(
-                                                                vertical: 30.0),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceBetween,
-                                                          children: [
-                                                            Row(
-                                                              children: [
-                                                                Icon(
-                                                                  Icons
-                                                                      .thermostat,
-                                                                  size: 45,
-                                                                  color: colors
-                                                                      .primaryTextColor,
-                                                                ),
-                                                                Text(
-                                                                  '28°',
-                                                                  style: GoogleFonts.raleway(
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                      color: colors
-                                                                          .primaryTextColor,
-                                                                      fontSize:
-                                                                          40),
-                                                                )
-                                                              ],
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
                                                       SizedBox(
-                                                        height: 30,
+                                                        height: 20,
                                                       ),
+
+                                                      Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        children: [
+                                                          Row(
+                                                            children: [
+                                                              Icon(
+                                                                Icons
+                                                                    .thermostat,
+                                                                size: 45,
+                                                                color: colors
+                                                                    .primaryTextColor,
+                                                              ),
+                                                              Text(
+                                                                '28°',
+                                                                style: GoogleFonts.raleway(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400,
+                                                                    color: colors
+                                                                        .primaryTextColor,
+                                                                    fontSize:
+                                                                        30),
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      TextBoxField(
+                                                          title: "Humidity",
+                                                          hint:
+                                                              "Enter the humidity",
+                                                          padding: EdgeInsets
+                                                              .symmetric(
+
+                                                                  horizontal:
+                                                                      30),
+                                                          light: false),
                                                       Row(
                                                         mainAxisAlignment:
                                                             MainAxisAlignment
